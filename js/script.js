@@ -25,133 +25,126 @@ let aboutState = {
   function updateAboutSection() {
     // Usamos innerHTML para que se interprete el enlace en la versión extendida
     aboutTextElem.innerHTML = aboutTexts[aboutState.length][aboutState.tone];
-    
+  
     // Botón de longitud: muestra la acción disponible
-    btnToggleLength.textContent = aboutState.length === 'resumido' ? "Extender" : "Resumir";
-    
+    btnToggleLength.textContent = (aboutState.length === 'resumido') ? "Extender" : "Resumir";
+  
     // Botón de tono: muestra la acción disponible
-    btnToggleTone.textContent = aboutState.tone === 'formal' ? "Informal" : "Formal";
+    btnToggleTone.textContent = (aboutState.tone === 'formal') ? "Informal" : "Formal";
   }
   
   // Eventos para los botones
   btnToggleLength.addEventListener('click', () => {
     // Toggle de longitud
-    aboutState.length = aboutState.length === 'resumido' ? 'extendido' : 'resumido';
+    aboutState.length = (aboutState.length === 'resumido') ? 'extendido' : 'resumido';
     updateAboutSection();
   });
   
   btnToggleTone.addEventListener('click', () => {
     // Toggle de tono
-    aboutState.tone = aboutState.tone === 'formal' ? 'informal' : 'formal';
+    aboutState.tone = (aboutState.tone === 'formal') ? 'informal' : 'formal';
     updateAboutSection();
   });
-
-  // Obtenemos la referencia del botón de "Sobre Mi" y la sección correspondiente
-    const btnNavSobreMi = document.getElementById('nav-sobre-mi');
-    const sectionAbout = document.querySelector('.about');
-
-    // Evento para desplazar la vista a la sección "Sobre Mi"
-    btnNavSobreMi.addEventListener('click', () => {
+  
+  // Botón "Sobre Mi"
+  const btnNavSobreMi = document.getElementById('nav-sobre-mi');
+  const sectionAbout = document.querySelector('.about');
+  btnNavSobreMi.addEventListener('click', () => {
     sectionAbout.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Al hacer clic en la foto de perfil, se desplaza a la parte superior
-    const profileImage = document.querySelector('.profile-img img');
-    profileImage.addEventListener('click', () => {
+  });
+  
+  // Al hacer clic en la foto de perfil, se desplaza a la parte superior
+  const profileImage = document.querySelector('.profile-img img');
+  profileImage.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Botón de "Portafolio" y la sección a la que se desplazará
-    const btnNavPortfolio = document.getElementById('nav-portfolio');
-    const sectionPortfolio = document.getElementById('portfolio-section');
-
-    btnNavPortfolio.addEventListener('click', () => {
+  });
+  
+  // Botón "Portafolio"
+  const btnNavPortfolio = document.getElementById('nav-portfolio');
+  const sectionPortfolio = document.getElementById('portfolio-section');
+  btnNavPortfolio.addEventListener('click', () => {
     sectionPortfolio.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Carrusel de imágenes para GYS Android
-    const carouselImages = [
-        "/img/1.png",
-        "/img/2.png",
-        "/img/3.png",
-        "/img/4.png",
-        "/img/5.png"
-    ];
-    let currentIndex = 0;
-    const androidCarousel = document.getElementById("android-carousel");
-    
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % carouselImages.length;
-        androidCarousel.src = carouselImages[currentIndex];
-    }, 3000);
-    
-    document.getElementById("android-prev").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
-        androidCarousel.src = carouselImages[currentIndex];
-    });
-    
-    document.getElementById("android-next").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % carouselImages.length;
-        androidCarousel.src = carouselImages[currentIndex];
-    });
-    
-    // Carrusel de imágenes para GYS iOS
-    const iosCarouselImages = [
-        "/img/1_ios.png",
-        "/img/2_ios.png",
-        "/img/3_ios.png",
-        "/img/4_ios.png",
-        "/img/5_ios.png",
-        "/img/6_ios.png"
-    ];
-    let currentIosIndex = 0;
-    const iosCarousel = document.getElementById("ios-carousel");
-    
-    setInterval(() => {
-        currentIosIndex = (currentIosIndex + 1) % iosCarouselImages.length;
-        iosCarousel.src = iosCarouselImages[currentIosIndex];
-    }, 3000);
-    
-    document.getElementById("ios-prev").addEventListener("click", () => {
-        currentIosIndex = (currentIosIndex - 1 + iosCarouselImages.length) % iosCarouselImages.length;
-        iosCarousel.src = iosCarouselImages[currentIosIndex];
-    });
-    
-    document.getElementById("ios-next").addEventListener("click", () => {
-        currentIosIndex = (currentIosIndex + 1) % iosCarouselImages.length;
-        iosCarousel.src = iosCarouselImages[currentIosIndex];
-    });
-    
-
-    // Botón de "Educación" y la sección a la que se desplazará
-    const btnNavEducation = document.getElementById('nav-education');
-    const sectionStudies = document.getElementById('studies-section');
-
-    btnNavEducation.addEventListener('click', () => {
+  });
+  
+  // Carrusel de imágenes para GYS Android
+  const carouselImages = [
+    "img/1.png",
+    "img/2.png",
+    "img/3.png",
+    "img/4.png",
+    "img/5.png"
+  ];
+  let currentIndex = 0;
+  const androidCarousel = document.getElementById("android-carousel");
+  
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    androidCarousel.src = carouselImages[currentIndex];
+  }, 3000);
+  
+  document.getElementById("android-prev").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+    androidCarousel.src = carouselImages[currentIndex];
+  });
+  
+  document.getElementById("android-next").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    androidCarousel.src = carouselImages[currentIndex];
+  });
+  
+  // Carrusel de imágenes para GYS iOS
+  const iosCarouselImages = [
+    "img/1_ios.png",
+    "img/2_ios.png",
+    "img/3_ios.png",
+    "img/4_ios.png",
+    "img/5_ios.png",
+    "img/6_ios.png"
+  ];
+  let currentIosIndex = 0;
+  const iosCarousel = document.getElementById("ios-carousel");
+  
+  setInterval(() => {
+    currentIosIndex = (currentIosIndex + 1) % iosCarouselImages.length;
+    iosCarousel.src = iosCarouselImages[currentIosIndex];
+  }, 3000);
+  
+  document.getElementById("ios-prev").addEventListener("click", () => {
+    currentIosIndex = (currentIosIndex - 1 + iosCarouselImages.length) % iosCarouselImages.length;
+    iosCarousel.src = iosCarouselImages[currentIosIndex];
+  });
+  
+  document.getElementById("ios-next").addEventListener("click", () => {
+    currentIosIndex = (currentIosIndex + 1) % iosCarouselImages.length;
+    iosCarousel.src = iosCarouselImages[currentIosIndex];
+  });
+  
+  // Botón "Educación"
+  const btnNavEducation = document.getElementById('nav-education');
+  const sectionStudies = document.getElementById('studies-section');
+  btnNavEducation.addEventListener('click', () => {
     sectionStudies.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Botón de "Skills" y la sección a la que se desplazará
-    const btnNavSkills = document.getElementById('nav-skills');
-    const sectionSkills = document.getElementById('skills-section');
-
-    btnNavSkills.addEventListener('click', () => {
+  });
+  
+  // Botón "Skills"
+  const btnNavSkills = document.getElementById('nav-skills');
+  const sectionSkills = document.getElementById('skills-section');
+  btnNavSkills.addEventListener('click', () => {
     sectionSkills.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Botón de "Skills" y la sección a la que se desplazará
-    const btnNavContact = document.getElementById('nav-contact');
-    const sectionContact = document.getElementById('contact-section');
-
-    btnNavContact.addEventListener('click', () => {
+  });
+  
+  // Botón "Contacto"
+  const btnNavContact = document.getElementById('nav-contact');
+  const sectionContact = document.getElementById('contact-section');
+  btnNavContact.addEventListener('click', () => {
     sectionContact.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    document.getElementById('btn-download-cv').addEventListener('click', () => {
-        window.location.href = '/CV_Alan_Sosa_Pereyra_2025.pdf';
-      });
-      
-
+  });
+  
+  // Botón de descarga del CV (si tuvieras uno específico con id)
+  document.getElementById('btn-download-cv')?.addEventListener('click', () => {
+    window.location.href = 'CV_Alan_Sosa_Pereyra_2025.pdf';
+  });
+  
   // Inicializamos la sección con el estado por defecto
   updateAboutSection();
   
