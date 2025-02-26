@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <!-- Imagen ovalada -->
+      <div class="profile-img">
+        <img src="/img/perfil_3.jpeg" alt="Imagen de Perfil">
+      </div>
+      <!-- Botones de navegación -->
+    <nav class="nav">
+      <button class="nav-btn" id="nav-sobre-mi">Sobre Mi</button>
+      <button class="nav-btn" id="nav-portfolio">Portafolio</button>
+      <button class="nav-btn" id="nav-education">Educación</button>
+      <button class="nav-btn" id="nav-skills">Skills</button>
+      <button class="nav-btn" id="nav-contact">Contacto</button>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="content">
+    <!-- Sección de Bienvenida (primer slide) -->
+    <section class="welcome">
+      <div class="slide">
+        <h1 class="name">ALAN SOSA P.</h1>
+        <h2 class="welcome-message">Bienvenido a mi Portafolio como Developer.</h2>
+        <p class="contact">
+          correo de contacto: 
+          <a href="mailto:developersosalan@gmail.com?subject=Vengo%20de%20tu%20portafolio" class="email-link">
+            developersosalan@gmail.com
+          </a>
+        </p>
+        <a class="download-cv" href="/CV_Alan_Sosa_Pereyra_2025.pdf" download>
+          Descarga mi CV ↓
+        </a>        
+      </div>
+    </section>
+    
+    <!-- Sección de Sobre Mi (aparece al hacer scroll) -->
+    <section class="about">
+      <div class="slide">
+        <h2 class="about-title">SOBRE MI</h2>
+        <p id="about-text" class="about-text">
+          <!-- Texto por defecto: resumido y formal -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p class="contact">
+          correo de contacto: 
+          <a href="mailto:developersosalan@gmail.com?subject=Vengo%20de%20tu%20portafolio" class="email-link">
+            developersosalan@gmail.com
+          </a>
+        </p>
+        <!-- Controles para cambiar la versión del texto -->
+        <div id="about-controls">
+          <button id="toggle-length" class="control-btn">Extender</button>
+          <button id="toggle-tone" class="control-btn">Informal</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Sección de Portafolio -->
+    <section class="portfolio" id="portfolio-section">
+      <div class="slide">
+        <h2 class="portfolio-title">PORTAFOLIO</h2>
+        <div class="cards">
+          <!-- Tarjeta GYS Android -->
+          <div class="card">
+            <div class="carousel-container">
+              <div class="img-wrapper">
+                <img id="android-carousel" src="/img/1.png" alt="GYS Android">
+              </div>
+              <button class="carousel-btn prev-btn" id="android-prev">&larr;</button>
+              <button class="carousel-btn next-btn" id="android-next">&rarr;</button>
+            </div>
+            <h2 class="card-text">GYS Android</h2>
+            <!-- Lista de tecnologías para Android -->
+            <ul class="tech-list">
+              <li>
+                <img src="/img/Android_Studio_icon.png" alt="Android Studio">
+                Android Studio
+              </li>
+              <li>
+                <img src="/img/Kotlin_icon.png" alt="Kotlin">
+                Kotlin
+              </li>
+              <li>
+                <img src="/img/Firebase_icon.png" alt="Firebase">
+                Firebase
+              </li>
+            </ul>
+          </div>
+          <!-- Tarjeta GYS iOS -->
+          <div class="card">
+            <div class="carousel-container">
+              <div class="img-wrapper">
+                <img id="ios-carousel" src="/img/1_ios.png" alt="GYS iOS">
+              </div>
+              <button class="carousel-btn prev-btn" id="ios-prev">&larr;</button>
+              <button class="carousel-btn next-btn" id="ios-next">&rarr;</button>
+            </div>
+            <h2 class="card-text">GYS iOS</h2>
+            <!-- Lista de tecnologías para iOS -->
+            <ul class="tech-list">
+              <li>
+                <img src="/img/Xcode_icon.png" alt="Xcode">
+                Xcode
+              </li>
+              <li>
+                <img src="/img/Swiftui_icon.png" alt="SwiftUI">
+                SwiftUI
+              </li>
+              <li>
+                <img src="/img/Firebase_icon.png" alt="Firebase">
+                Firebase
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Estudios -->
+    <section class="studies" id="studies-section">
+      <div class="slide">
+        <h2 class="studies-title">ESTUDIOS</h2>
+        <p class="studies-text">
+          Estudié Ingeniería en Sistemas Computacionales en el Tecnológico de Parral, Chihuahua.
+        </p>
+        <ul class="studies-list">
+          <li>Tecnológico de Parral, Chihuahua - Ingeniería en Sistemas Computacionales (2018-2022)</li>
+          <li>Cursos de PHP &amp; MySQL en Udemy (2019-2022)</li>
+          <li>Estudios autodidactas en otros lenguajes de programación (2024-2025)</li>
+          <li>Cartilla militar al día</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección de Skills -->
+    <section class="skills" id="skills-section">
+      <div class="slide">
+        <h2 class="skills-title">SKILLS</h2>
+        <ul class="skills-list">
+          <li>
+            <img src="/img/Android_Studio_icon.png" alt="Android Studio Icon">
+            Android Studio
+          </li>
+          <li>
+            <img src="/img/Firebase_icon.png" alt="Firebase Icon">
+            Firebase
+          </li>
+          <li>
+            <img src="/img/Kotlin_icon.png" alt="Kotlin Icon">
+            Kotlin
+          </li>
+          <li>
+            <img src="/img/Swiftui_icon.png" alt="SwiftUI Icon">
+            SwiftUI
+          </li>
+          <li>
+            <img src="/img/Xcode_icon.png" alt="Xcode Icon">
+            Xcode
+          </li>
+          <li>
+            <img src="/img/php_icon.png" alt="PHP Icon">
+            PHP
+          </li>
+          <li>
+            <img src="/img/mysql_icon.png" alt="MySQL Icon">
+            MySQL
+          </li>
+          <li>
+            <img src="/img/javascript_icon.png" alt="JavaScript Icon">
+            JavaScript
+          </li>
+          <li>
+            <img src="/img/html_icon.png" alt="HTML Icon">
+            HTML
+          </li>
+          <li>
+            <img src="/img/cargando_gif.webp" alt="HTML Icon">
+            EN PROCESO DE SEGUIR APRENDIENDO
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section" id="contact-section">
+      <div class="slide">
+        <h2 class="contact-title">CONTACTO</h2>
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:developersosalan@gmail.com?subject=Contacto%20desde%20portafolio" class="contact-link">
+              <img src="/img/Gmail_icon.png" alt="Gmail Icon">
+              developersosalan@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/s.p.alan" target="_blank" class="contact-link">
+              <img src="/img/Instagram_icon.png" alt="Instagram Icon">
+              @s.p.alan
+            </a>
+          </li>
+          <a class="download-cv" href="/CV_Alan_Sosa_Pereyra_2025.pdf" download>
+            Descarga mi CV ↓
+          </a>
+          
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+  
+  <script src="/js/script.js"></script>
+</body>
+</html>
