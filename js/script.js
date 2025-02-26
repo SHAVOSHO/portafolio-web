@@ -8,11 +8,11 @@ let aboutState = {
   const aboutTexts = {
     resumido: {
       formal: "Estudié en el Tecnológico de Parral, Chihuahua, motivado por mi interés en comprender el funcionamiento interno de los videojuegos. Participé en hackatones y realicé proyectos destacados.",
-      informal: "¡Quiúbole! Soy Alan. Estudié en el Tecnológico de Parral porque me latía descubrir cómo se movían los personajes en los videojuegos. He participado en hackatones, armé apps y hasta me rifé con el cableado. Además, me late echarme unas buenas sesiones de anime y enterarme de lo último en tecnología."
+      informal: "¡Quiúbole! Soy Alan. Estudié en el Tecnológico de Parral porque quería descubrir cómo se movían los personajes en los videojuegos. He participado en hackatones, armé apps y hasta me rifé con el cableado. Además, me gusta echarme unas buenas sesiones de anime y enterarme de lo último en tecnología."
     },
     extendido: {
       formal: "Estudié en el Tecnológico de Parral, Chihuahua, impulsado por una profunda pasión por entender el funcionamiento interno de los videojuegos. Durante mi formación, participé en eventos como Hackatec/Innovatec, colaborando en proyectos para optimizar sistemas empresariales y desarrollando aplicaciones como <a href=\"https://play.google.com/store/apps/details?id=com.gys_dev.gys&hl=en&gl=US\" target=\"_blank\">Garage Sale Finder</a>. Mi enfoque profesional se centra en aplicar las nuevas tecnologías de manera responsable y eficiente.",
-      informal: "¡Qué onda! Soy Alan y te cuento sin rodeos: estudié en el Tecnológico de Parral porque siempre me latió descubrir qué rollo traían los videojuegos detrás de cámaras. Entre hackatones, apps y hasta aventones con el cableado, me he rifado enfrentando retos. Uno de mis proyectos, <a href=\"https://play.google.com/store/apps/details?id=com.gys_dev.gys&hl=en&gl=US\" target=\"_blank\">Garage Sale Finder</a>, te ayuda a encontrar garajes abiertos cerca. Y en mi tiempo libre, me la paso viendo anime y poniéndome al tanto de lo nuevo en tecnología."
+      informal: "¡Qué onda! Soy Alan y te cuento sin rodeos: estudié en el Tecnológico de Parral porque siempre quise descubrir qué rollo traían los videojuegos detrás. Entre hackatones, apps y hasta peleas con el cableado, me he rifado enfrentando retos. Uno de mis proyectos, <a href=\"https://play.google.com/store/apps/details?id=com.gys_dev.gys&hl=en&gl=US\" target=\"_blank\">Garage Sale Finder</a>, te ayuda a encontrar garajes abiertos cerca. Y en mi tiempo libre, me la paso viendo anime y poniéndome al tanto de lo nuevo en tecnología."
     }
   };
   
